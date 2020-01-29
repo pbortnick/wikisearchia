@@ -1,0 +1,34 @@
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  input {
+    border: 0px solid #eee;
+    padding: 10px;
+    width: 78%;
+    border-radius: 4px;
+    font-family: Helvetica, sans-serif;
+    outline: none;
+    font-size: 14px;
+  }
+
+  button {
+    border: 1px solid #ea9085;
+    background-color: #ea9085;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+
+    svg {
+      fill: #fff;
+    }
+
+    &:hover {
+      svg {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}

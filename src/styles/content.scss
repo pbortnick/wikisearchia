@@ -1,0 +1,52 @@
+.content {
+  overflow: scroll;
+  max-height: 100%;
+
+  ul {
+    list-style-type: none;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 8px;
+
+
+    li {
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ea9085;
+
+      &:last-child {
+        border: 0;
+      }
+
+      .wiki-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .initial {
+    padding: 20px 30px;
+
+    &-options {
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+
+      a {
+        margin-right: 40px;
+        font-size: 18px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}
