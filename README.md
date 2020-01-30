@@ -14,6 +14,14 @@ The code uses React Context.
 3. Search History - uses `SearchContext` to display recent searches and when clicked, send to the rest of the app to conduct the search.
 4. Logo - uses `SearchContext` to reset to default settings and display the homepage.
 
+### Event Triggers:
+`onKeyDown`
+1. When the enter key is pressed - executes search with the search input text and resets the input value to an empty string.
+
+`onClick`
+1. When a link is clicked - executes search with the target link's search value.
+2. When the search button is clicked - executes search with the search input text and resets the input value to an empty string.
+3. When the header logo is clicked - sets search input value to and empty string and returns to the homepage
 
 ### Styles
 Styles are written in sass.
