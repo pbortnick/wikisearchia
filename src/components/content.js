@@ -17,7 +17,7 @@ const Content = () => {
       })
   }
 
-  if (!searchContext.history.length && content.length) {
+  if (searchContext.reset && content.length) {
     setContent('');
   }
 

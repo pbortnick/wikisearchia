@@ -8,7 +8,8 @@ const SearchState = (props) => {
   const initialState = {
     searchValue: '',
     history: [],
-    searched: false
+    searched: false,
+    reset: false
   }
 
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -41,7 +42,7 @@ const SearchState = (props) => {
   }
 
   return  (
-    <searchContext.Provider value={{ searchValue: state.searchValue, history: state.history, sendSearch, stopSearch, resetPage }}>
+    <searchContext.Provider value={{ searchValue: state.searchValue, history: state.history, reset: state.reset, sendSearch, stopSearch, resetPage }}>
       {props.children}
     </searchContext.Provider>
   )

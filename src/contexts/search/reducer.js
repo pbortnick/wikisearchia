@@ -7,13 +7,15 @@ export default (state, action) => {
 				...state,
 				searchValue: action.payload.input,
 				searched: action.payload.searched,
-				history: action.payload.input.length ? [...state.history, action.payload.input] : state.history
+				history: action.payload.input.length && !state.history.includes(action.payload.input) ? [...state.history, action.payload.input] : state.history,
+				reset: false
 			};
 		case RESET_PAGE:
 			return {
+				...state,
 				searchValue: '',
-				history: [],
-				searched: false
+				searched: false,
+				reset: true
 			};
 		default:
 			return state;
